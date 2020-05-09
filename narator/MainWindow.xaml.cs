@@ -102,13 +102,13 @@ namespace narator
             {
                 System.Diagnostics.Process pro = new System.Diagnostics.Process();
                 // TODO: まともなパス管理
-                pro.StartInfo.FileName = "E:\\Users\\ユウヤ\\Documents\\workspace\\narrator\\narator\\narator\\SofTalk.exe";
+                pro.StartInfo.FileName = "softalk";
                 pro.StartInfo.Arguments = "/close /w:" + text.Text;
                 pro.StartInfo.UseShellExecute = true;
                 pro.StartInfo.RedirectStandardOutput = false;
 
-                pro.Start();
                 text.Text = "";
+                pro.Start();
             }
         }
         protected override void OnClosed(EventArgs e)
