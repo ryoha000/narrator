@@ -101,12 +101,11 @@ namespace narator
             if (e.Key == Key.Enter)
             {
                 System.Diagnostics.Process pro = new System.Diagnostics.Process();
-
+                // TODO: まともなパス管理
                 pro.StartInfo.FileName = "E:\\Users\\ユウヤ\\Documents\\workspace\\narrator\\narator\\narator\\SofTalk.exe";
-                pro.StartInfo.Arguments = "/close /w:" + text.Text;               // 引数
-                pro.StartInfo.CreateNoWindow = false;            // DOSプロンプトの黒い画面を非表示
-                pro.StartInfo.UseShellExecute = true;          // プロセスを新しいウィンドウで起動するか否か
-                pro.StartInfo.RedirectStandardOutput = false;    // 標準出力をリダイレクトして取得したい
+                pro.StartInfo.Arguments = "/close /w:" + text.Text;
+                pro.StartInfo.UseShellExecute = true;
+                pro.StartInfo.RedirectStandardOutput = false;
 
                 pro.Start();
                 text.Text = "";
